@@ -1,0 +1,19 @@
+{
+  "name": "purple-dagger",
+  "version": "1.0.0",
+  "description": "This project aims to create a space for dev-news, dev-tips, daily design inspiration from across the web, code-named Purple Dagger 🗡🗡",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shriram-Balaji/purple-dagger.git"
+  },
+  "author": "Shriram Balaji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shriram-Balaji/purple-dagger/issues"
+  },
+  "homepage": "https://github.com/Shriram-Balaji/purple-dagger#readme"
+}
