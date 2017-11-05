@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Circular Medium";
+  src: url("../assets/fonts/circular-medium.otf") format("opentype");
+}
+
+.app-name {
+  font-family: "Circular Medium", sans-serif;
+  text-align: center;
+}
