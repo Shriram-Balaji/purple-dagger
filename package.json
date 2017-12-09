@@ -1,8 +1,8 @@
 {
-  "name": "purple-dagger",
+  "name": "rad-proton",
   "version": "1.0.0",
   "description":
-    "This project aims to create a space for dev-news, dev-tips, daily design inspiration from across the web, code-named Purple Dagger 🗡🗡",
+    "The React Frontend to create a space for dev-news, dev-tips, daily design inspiration from across the web.",
   "main": "app/src/index.js",
   "scripts": {
     "build": "webpack",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shriram-Balaji/purple-dagger.git"
+    "url": "git+https://github.com/Shriram-Balaji/rad-proton.git"
   },
   "author": "Shriram Balaji",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shriram-Balaji/purple-dagger/issues"
+    "url": "https://github.com/Shriram-Balaji/rad-proton/issues"
   },
-  "homepage": "https://github.com/Shriram-Balaji/purple-dagger#readme",
+  "homepage": "https://github.com/Shriram-Balaji/rad-proton#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
