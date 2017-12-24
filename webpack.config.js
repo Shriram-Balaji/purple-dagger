@@ -19,6 +19,12 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: ["babel-polyfill", "./app/src/index.js"],
+  resolve: {
+    extensions: ['.js', '.jsx','.css'],
+    modules: [
+      'node_modules'
+    ]        
+  },
   output: {
     path: path.resolve(__dirname, "./build"),
     publicPath: "/",
@@ -31,6 +37,21 @@ module.exports = {
         test: /\.js$/, // a regular expression that catches .js files
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+            presets: ['es2015']
+        }
+      },
+      {    test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },

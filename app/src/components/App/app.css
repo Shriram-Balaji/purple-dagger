@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Circular Medium";
+  src: url("../../assets/fonts/circular-medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circular Book ";
+  src: url("../../assets/fonts/lineto-circular-book-s.woff") format("woff");
+}
+
+:root {
+  --primary-color: "#5F5CFF";
+  --secondary-color:"";
+  --accent-color:"#333e50";
+  --app-background:"#d3d3d3"
+}
+
+.app-name {
+  font-family: 'Circular Medium';
+}
+
+.app-container {
+  background: var(--app-background);
+  padding: 0px !important;
+}
