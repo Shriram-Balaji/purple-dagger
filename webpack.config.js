@@ -50,9 +50,12 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(ttf|otf|eot|woff(2)?)?$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
-      }
+      },
+      {
+        test: /\.(jpeg|png|gif|svg)$/i, loader: "file-loader?name=images/[name].[ext]"
+      },
     ]
   },
   plugins: [HtmlWebpackPluginConfig],
