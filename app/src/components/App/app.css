@@ -8,11 +8,16 @@
   src: url("../../assets/fonts/lineto-circular-book-s.woff") format("woff");
 }
 
+
 :root {
-  --primary-color: "#5F5CFF";
+  /* --primary-color: "#5F5CFF";
   --secondary-color:"";
-  --accent-color:"#333e50";
-  --app-background:"#d3d3d3"
+  --accent-color:"#333e50"; */
+  --app-background:"#ffffff";
+}
+
+.bg-primary {
+  background: '#5F5CFF';
 }
 
 .app-name {
@@ -22,4 +27,13 @@
 .app-container {
   background: var(--app-background);
   padding: 0px !important;
+}
+
+/*-----UTIL------*/
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin:0 !important;
 }

@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
-import Home from '../../routes/Home'
+import Home from '~/routes/Home'
 import 'spectre.css/dist/spectre.min.css'
 import 'spectre.css/dist/spectre-exp.min.css'
 import 'spectre.css/dist/spectre-icons.min.css'
-import 'spectre.css/dist/spectre-exp.css'
-
 import './app.css'
 
 class App extends Component {
