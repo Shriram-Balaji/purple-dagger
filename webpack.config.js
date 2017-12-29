@@ -20,7 +20,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: ["babel-polyfill", "./app/src/index.js"],
   resolve: {
-    extensions: ['.js', '.jsx','.css'],
+    extensions: ['.js', '.jsx','.css','.scss'],
     modules: [
       'node_modules'
     ]        
@@ -28,10 +28,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./build"),
     publicPath: "/",
-    filename: "[name].bundle.js",
-    sourceMapFilename: "[name].map"
+    filename: "[name].bundle.js"
   },
-  module: {
+  module: { 
     loaders: [
       {
         test: /\.js$/, // a regular expression that catches .js files
@@ -46,16 +45,31 @@ module.exports = {
             presets: ['es2015']
         }
       },
-      {    test: /\.css$/,
-        loader: 'style-loader!css-loader'
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.(ttf|otf|eot|woff(2)?)?$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
       },
       {
-        test: /\.(jpeg|png|gif|svg)$/i, loader: "file-loader?name=images/[name].[ext]"
+        test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/, loader: "file-loader?name=images/[name].[ext]"
       },
+      {
+        test: /\.inline.svg$/,
+        exclude: /node_modules/,
+        use:[      {
+          loader: "babel-loader"
+        },
+        {
+        loader: 'react-svg-loader',
+        options: {
+          jsx:true
+        }
+        }]
+  
+      }
     ]
   },
   plugins: [HtmlWebpackPluginConfig],
