@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './sidebar.css'
-import icons from '~/icons.assets'
+import icons from '~/icons.services'
 
 class Sidebar extends Component {
   constructor(props){
@@ -16,10 +16,14 @@ class Sidebar extends Component {
     const listItems = (services).map((service, index) => {
       let id = `${service}Icon`
       let link = "#"+`${service}`
+      let first = service.slice(0,1)
+      let name = first.toUpperCase() + service.slice(1)
       return (
       <li key={service}>
-       <a href={link} id={id} className="sidebar-icon-container"  onClick={this.props.onSelectTab.bind(this, index)}>
-       <img src={this.getImageSource(service)} className="sidebar-icon" alt={service} /></a>
+       <a href={link} id={id} className="sidebar-icons"  onClick={this.props.onSelectTab.bind(this, index)}>
+       <img src={this.getImageSource(service)} className="sidebar-icon" alt={service} />
+              <p className="is-hidden-tablet service-name">{name}</p>
+        </a>
       </li>
       );
     });
@@ -30,15 +34,11 @@ class Sidebar extends Component {
 
   render(){
     return(
-      <div className="column col-1">
-        <div id="sidebar-container" className="off-canvas">
-          <div id="sidebar" className="off-canvas-sidebar off-canvas-sidebar-show">
-            <div className="sidebar-content">
+          <div className="sidebar">
+            <div id="sidebar-content">
               {this.listServiceIcons(this.props) }
             </div>
           </div>
-        </div>  
-      </div>
     );
   };
 };

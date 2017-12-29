@@ -1,35 +1,52 @@
 import React, { Component } from 'react'
+import config from '~/config'
 import './home.css'
 import Header from '~/components/Header'
-import MainContainer from '~/components/MainContainer'
 import Sidebar from '~/components/Sidebar'
+import MainContainer from '~/components/MainContainer'
 import PrimaryContent from '~/components/PrimaryContent'
 // import Footer from '~/components/Footer'
 
+import dribbbleData from '../../../../data/mock-dribbble.json'
+
 class Home extends Component {
+
   constructor(props){
     super(props);
+    this.state = {selected: props.selected}
+    this.selectTab = this.selectTab.bind(this)
   }
-
-  getServices(){
-    let services = ['dribbble','gitHub','product Hunt','code Pen'];
+  
+  getServices(config){
+    let services = config.services.available
+    services = services.map(s => s.replace(/\s+/g, ''))
     return services
+  };
+    
+  selectTab(index, event){
+    event.preventDefault();
+    this.setState({selected: index})
   }
 
   render(){
     return(
-      <div className = "container" id="homeContainer">
-        <div className="columns">
-          <div className="column col-12 no-padding no-margin">
-            <Header logo="Rad Proton"/>
+      <div id="homeContainer" className="fill-parent">
+        <Header logo="Rad Proton"></Header>
+          <div className="columns fill-parent">
+           <div className="column is-narrow">
+              <div id="sidebarContainer">
+                <Sidebar services={this.getServices(config)} selected={this.props.selected} onSelectTab={this.selectTab} ></Sidebar>
+              </div>
+           </div>
+            <div className="column" id="mainContainer">
+              <MainContainer selected={this.state.selected}> 
+                <PrimaryContent data={dribbbleData} title="Dribbble"></PrimaryContent>
+                <PrimaryContent title="GitHub"></PrimaryContent>
+                <PrimaryContent title="Product Hunt"></PrimaryContent>
+                <PrimaryContent title="Code Pen"></PrimaryContent>
+              </MainContainer>
+            </div>  
           </div>
-            <MainContainer selected={0} services={this.getServices()}> 
-              <PrimaryContent title="Dribbble"></PrimaryContent>
-              <PrimaryContent title="GitHub"></PrimaryContent>
-              <PrimaryContent title="Product Hunt"></PrimaryContent>
-              <PrimaryContent title="Code Pen"></PrimaryContent>
-            </MainContainer>
-        </div>  
       </div>
       )
   }

@@ -1,0 +1,94 @@
+.rad-card {
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05) !important;
+  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+  cursor: pointer;
+}
+
+.rad-card .card-header .card-header-title {
+  font-family: 'Circular Medium',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: none;
+  color: white;
+}
+
+.rad-card, .rad-card .card-image{
+  border-radius: 4px;
+}
+
+.rad-card .card-image img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.rad-card .card-content{
+  font-family: 'Circular Book',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: start;
+  padding: 0.75rem;
+}
+
+.rad-card .rad-overlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    /* top: 0; centered overlay otherwise*/ 
+    background: #0009;
+}
+
+.rad-chip {
+  align-items: center;
+  border-radius: 5rem;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  -ms-flex-align: center;
+  font-size: 90%;
+  height: 1.2rem;
+  line-height: .8rem;
+  margin: .1rem;
+  max-width: 100%;
+  padding: 0.8rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.rad-chip a{
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+}
+
+
+.rad-chip svg {
+  background-color:  #FF3860;
+  padding: 4px;
+  border-radius: 5rem;
+}
+
+.rad-chip .avatar {
+  margin-left: -.6rem;
+  margin-right: .6rem;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+
+.rad-card:hover {
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+/*------- SPECIFIC CLASSES ----------- */
+
+ .dribbble .link {
+  color: #ff3860;
+  width: 100%;
+}
+
+.dribbble:hover {
+  background-color:  #FF3860;
+}
+
+.dribbble:hover .link {
+  color:white;
+}
+
+

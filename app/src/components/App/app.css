@@ -4,29 +4,24 @@
 }
 
 @font-face {
-  font-family: "Circular Book ";
-  src: url("../../assets/fonts/lineto-circular-book-s.woff") format("woff");
+  font-family: "Circular Book";
+  src: url("../../assets/fonts/circular-book.woff") format("woff");
 }
 
-
 :root {
-  /* --primary-color: "#5F5CFF";
-  --secondary-color:"";
-  --accent-color:"#333e50"; */
-  --app-background:"#ffffff";
+  --red-primary: FF3860;
+}
+
+html, body, #root{
+  width: 100%;
+  height: 100%;
 }
 
 .bg-primary {
   background: '#5F5CFF';
 }
-
 .app-name {
   font-family: 'Circular Medium';
-}
-
-.app-container {
-  background: var(--app-background);
-  padding: 0px !important;
 }
 
 /*-----UTIL------*/
@@ -36,4 +31,27 @@
 
 .no-margin {
   margin:0 !important;
+}
+
+.margin-left-4 {
+  margin-left: 4rem;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.fill-parent {
+  height: 100%;
+}
+.no-background {
+  background: none;
+} 
+
+.border-red {
+  border: 0.5px solid #FF3860;
+}
+
+.background-red {
+  background-color: #FF3860;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './header.css'
+import icons from '~/icons.services'
 
 class Header extends Component {
   constructor(props){
@@ -10,8 +11,8 @@ class Header extends Component {
     return(
       <header className="navbar rad-navbar">
         <section className="navbar-section">
-          <a href="#" id="rad_icon" className="navbar-brand mr-2 rad-header">{this.props.logo}</a>
-          <a href="https://github.com/Shriram-Balaji/rad-proton" className="btn btn-link">GitHub</a>
+          <a href="#" id="rad_icon" className="rad-header is-size-2 is-size-3-mobile">{this.props.logo}</a>
+          <span id="nightMode"></span>
         </section>
       </header>             
     );
