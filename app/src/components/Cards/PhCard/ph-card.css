@@ -1,0 +1,46 @@
+.thumbnail {
+  border-radius: 4px;
+  height: 100% !important;
+  object-position: top;
+  object-fit: cover;
+}
+
+.title:not(.is-spaced) + .subtitle {
+  margin-top: -1.0rem !important;
+}
+
+.subtitle {
+  color: #616161;
+}
+
+.card-content {
+  padding: .95rem !important;
+ }
+
+ .card-content .media {
+   height: 100%;
+ }
+
+ .ph-tile-footer {
+   padding: 1rem;
+   border-top: 1px solid #eee !important;
+ }
+
+ .makers {
+   text-align: start;
+ }
+ 
+ .makers ul{
+   display: flex;
+   padding: 2px 8px;
+ }
+
+ .makers li {
+   margin: 5px !important;
+ }
+
+ .makers #makerTitle {
+  padding: 10px 0px 0px 15px;
+  font-size: 0.85rem;
+  color: #1fd09a;
+}

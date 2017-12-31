@@ -8,6 +8,7 @@ import PrimaryContent from '~/components/PrimaryContent'
 // import Footer from '~/components/Footer'
 
 import dribbbleData from '../../../../data/mock-dribbble.json'
+import productHuntData from '../../../../data/product-hunt-posts.json'
 
 class Home extends Component {
 
@@ -40,9 +41,9 @@ class Home extends Component {
            </div>
             <div className="column" id="mainContainer">
               <MainContainer selected={this.state.selected}> 
-                <PrimaryContent data={dribbbleData} title="Dribbble"></PrimaryContent>
+                <PrimaryContent data={dribbbleData} title="Dribbble" type="dribbble"></PrimaryContent>
                 <PrimaryContent title="GitHub"></PrimaryContent>
-                <PrimaryContent title="Product Hunt"></PrimaryContent>
+                <PrimaryContent title="Product Hunt" data={productHuntData} type="productHunt"></PrimaryContent>
                 <PrimaryContent title="Code Pen"></PrimaryContent>
               </MainContainer>
             </div>  
