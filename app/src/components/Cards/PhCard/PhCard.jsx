@@ -17,26 +17,39 @@ class PhCard extends Component {
   renderIcon(props){
     const iconName = props.icon.name
     const style  = props.icon.style
-    console.log(style)
     const Icon = Icons[iconName]
     const iconClass = classNames({
-    'avatar': style.avatar
+      'avatar': style.avatar,
+      'ph-avatar': style.avatar
     });
     return( <Icon fill={style.fill} stroke={style.stroke} className={iconClass}/> )
   }
 
-  listMakers(props){
-    let makers = []
-    for(let index in props.makers){
-      let maker = props.makers[index]
-      let imageUrl = maker['image_url']['44px']
-      makers[index] = (
-        <li><img src={imageUrl} className="rounded"/></li>
-      )
-    }
-    return (<ul>{makers}</ul>)
+  openProfile(event, url){
+    event.preventDefault();
+    window.open(url)
   }
 
+  listMakers(props){
+    let makers = []
+    if(props.makers.length <= 0){
+      makers[0] = (
+        <li><span className="rounded no-maker"/></li>
+      )
+    }
+    else {
+      for(let index in props.makers){
+        let maker = props.makers[index]
+        let imageUrl = maker['image_url']
+        ['44px']
+        let profileUrl = maker['profile_url']
+        makers[index] = (
+          <li onClick={(e) => this.openProfile( e, profileUrl)}><img src={imageUrl} className="rounded maker-avatar" alt={maker.username} /></li>
+        )
+      }
+    }
+    return (<ul className>{makers}</ul>)
+  }
 
   render(){
       return(
@@ -59,10 +72,19 @@ class PhCard extends Component {
               <p id="makerTitle"> MAKERS </p>
               {this.listMakers(this.props)}
             </div>
-            <div className="card-footer ph-tile-footer">
-              <span className={`chips ${this.props.colors['detail-one']}-chip `}>
-                  {this.renderIcon(this.props.meta['detail-one'])}
-                 {this.props.detailOne}</span>
+            <div className="card-footer ph-tile-footer columns no-margin padding-5">
+              <div id="metaContainer" className="column padding-5">
+                <span className={`chips ${this.props.colors['detail-one']}-chip `}>
+                    {this.renderIcon(this.props.meta['detail-one'])}
+                  {this.props.detailOne}</span>
+                
+                <span className={`chips ${this.props.colors['detail-two']}-chip `}>
+                    {this.renderIcon(this.props.meta['detail-two'])}
+                  {this.props.detailTwo}</span>
+              </div>
+              <div className="column align-end padding-5">
+               <a className="button is-red is-outlined is-small btn-rounded" id="redirectBtn"> GET IT</a>
+              </div>    
             </div>
           </div>
         </div> 

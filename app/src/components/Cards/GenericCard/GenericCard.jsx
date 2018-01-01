@@ -8,9 +8,8 @@ class GenericCard extends Component {
     super(props)
   }
 
-  openLink(event){
-    event.preventDefault();
-    window.open(this.props.link);
+  openLink(link){
+    window.open(link);
   }
 
   renderIcon(props){
@@ -25,7 +24,7 @@ class GenericCard extends Component {
 
   render(){
     return(
-    <div className="column is-3" onClick={this.openLink.bind(this)}>  
+    <div className="column is-3" onClick={()=> this.openLink(this.props.link)}>  
         <div className="card content-tile">
           <div className="card-image">
               <figure className="image is-4by3">

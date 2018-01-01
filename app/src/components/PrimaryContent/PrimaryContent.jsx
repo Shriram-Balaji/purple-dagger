@@ -29,18 +29,17 @@ class PrimaryContent extends Component {
 
   renderPhCards(props, cards, item, index) {
     let color = config['productHunt']['palette']
-    console.log(color);
     cards[index] = <PhCard key={item.id} 
       header={item.name}
       tagline = {item.tagline}
       link={item['discussion_url']} 
+      redirect={item['redirect_url']}
       image={item.thumbnail['image_url']}
       colors={config[props.type]['palette']}  
       meta={config[props.type]['meta']}
       detailOne={item['votes_count']}
       makers = {item.makers}
-      detailTwo = {item['comments-count']} />
-     
+      detailTwo = {item['comments_count']} />
     return cards[index]
   }
 
@@ -74,6 +73,7 @@ class PrimaryContent extends Component {
       </div> 
     )
   }
+
 }
 
 export default PrimaryContent

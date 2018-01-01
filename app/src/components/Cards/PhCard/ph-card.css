@@ -18,7 +18,7 @@
  }
 
  .card-content .media {
-   height: 100%;
+   min-height: 80px;
  }
 
  .ph-tile-footer {
@@ -28,6 +28,7 @@
 
  .makers {
    text-align: start;
+   min-height: 90px;
  }
  
  .makers ul{
@@ -43,4 +44,48 @@
   padding: 10px 0px 0px 15px;
   font-size: 0.85rem;
   color: #1fd09a;
+}
+
+.no-maker::after{
+  content: "NA";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: block;
+  text-align: center;
+  padding: 7px;
+  margin: 0px;
+}
+
+.chips .ph-avatar{
+  padding: 4px !important;
+}
+
+#redirectBtn {
+  margin: 5px;
+  transition: 0.1s background-color;
+}
+
+.button.is-red {
+  background-color: #da5520;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-red.is-outlined {
+  background-color: transparent;
+  border-color: #da5520;
+  color: #da552f;
+}
+
+.button.is-red.is-outlined:hover, .button.is-red.is-outlined:focus {
+  background-color: #da5520;
+  border-color: #da5520;
+  color: #fff;
+}
+
+.btn-rounded {
+  border-radius: 50px !important;
 }
