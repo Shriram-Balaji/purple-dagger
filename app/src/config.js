@@ -14,8 +14,8 @@ module.exports = {
   dribbble : {
     palette:{
       'primary':'pink',
-      'detail-one': 'red',
-      'detail-two': 'blue',
+      'detail-one': 'light-pink',
+      'detail-two': 'light-pink',
       'detail-three':'green'
     },
 
@@ -42,11 +42,10 @@ module.exports = {
   productHunt : {
     palette:{
       'primary':'pink',
-      'detail-one': 'orange',
-      'detail-two': 'red',
-      'detail-three':'green'
+      'detail-one': 'light-red',
+      'detail-two': 'light-red',
     },
-
+    
     // meta - extra info about the details provided
     meta:{  
       'detail-one':{
