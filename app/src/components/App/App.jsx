@@ -10,8 +10,8 @@ class App extends Component {
 
   render(){
     return(
-      <div id="appContainer" className="fill-parent">
-        <Home selected={2} />    
+      <div id="appContainer" className="full-container">
+        <Home selected={0} />    
       </div>
     )
 

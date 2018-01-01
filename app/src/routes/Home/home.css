@@ -1,0 +1,9 @@
+#homeContainer {
+  width: 100%;
+}
+
+#homeContainer > div {
+  display: flex;
+  flex:0 auto;
+  min-height: 100%;
+}

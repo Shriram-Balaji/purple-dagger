@@ -31,23 +31,23 @@ class Home extends Component {
 
   render(){
     return(
-      <div id="homeContainer" className="fill-parent">
-        <Header logo="Rad Proton"></Header>
-          <div className="columns fill-parent">
-           <div className="column is-narrow">
-              <div id="sidebarContainer">
-                <Sidebar services={this.getServices(config)} selected={this.props.selected} onSelectTab={this.selectTab} ></Sidebar>
+      <div id="homeContainer">
+          <Header logo="Rad Proton"/>
+            <div className="columns">
+              <div className="column is-narrow no-padding">
+                  <div id="sidebarContainer">
+                    <Sidebar services={this.getServices(config)} selected={this.props.selected} onSelectTab={this.selectTab} ></Sidebar>
+                  </div>
               </div>
-           </div>
-            <div className="column" id="mainContainer">
-              <MainContainer selected={this.state.selected}> 
-                <PrimaryContent data={dribbbleData} title="Dribbble" type="dribbble"></PrimaryContent>
-                <PrimaryContent title="GitHub"></PrimaryContent>
-                <PrimaryContent title="Product Hunt" data={productHuntData} type="productHunt"></PrimaryContent>
-                <PrimaryContent title="Code Pen"></PrimaryContent>
-              </MainContainer>
-            </div>  
-          </div>
+                <div className="column" id="mainContainer">
+                  <MainContainer selected={this.state.selected}> 
+                    <PrimaryContent data={dribbbleData} title="Dribbble" type="dribbble"></PrimaryContent>
+                    <PrimaryContent title="GitHub"></PrimaryContent>
+                    <PrimaryContent title="Product Hunt" data={productHuntData} type="productHunt"></PrimaryContent>
+                    <PrimaryContent title="Code Pen"></PrimaryContent>
+                  </MainContainer>
+                </div>  
+            </div>
       </div>
       )
   }
