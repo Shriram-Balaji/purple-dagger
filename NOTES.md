@@ -2,14 +2,13 @@
 
 ## WHY THIS PROJECT?
 
-This [amazing article](https://medium.com/the-year-of-the-looking-glass/the-importance-of-side-projects-cf9f63954031) about taking up a side project.
+This isnt working, this isnt driving me to complete as it actually should.
 
 ## THINGS TO REMEMBER
 
 ### I keep asking myself this - How do I find a project to tackle that has not already been tackled ?
 
-Doing something original isn’t a requirement. You’re not trying to start the next unicorn company. You’re just trying to build skills. So, if you see something that inspires you, and you’d like to try your hand at doing something similar, go for it. You’re bound to come up with a few interesting and original variations in the process, but moreover, you’ll be learning how to create the types of things you
-appreciate.
+WRONG. doing something original makes you want to continue to learn. this is now not that exciting as it should be to do a project. The increase in maturity of code should also mean that we dont keep repeating what we did.
 
 ## PROCEDURE
 
@@ -23,43 +22,15 @@ appreciate.
 ## How to Start the server
 
  `npm install`
- 
+
  `npm run start`
 
 -----------------------------------------------------
 
 ## IDEAS
 
-- This looks legit - [Design Weekly](http://designweekly.atomic.io/) 
-- Xkcd Comic API?
-- [Sidebar.io](http://sidebar.io/api)
-- Support as many as possible from UsePanda?
-
+Back to square one.
 
 ## CONTENT
 
-### Available List of sites for tech news
-
-- Smashing Magazine
-- Product Hunt
-- Techcrunch
-- TED
-- The Next Web
-- Mashable
-- Wired
-- The Verge
-- Hacker News
-- Gizmodo
-- Engadget
-- Ars Technica
-- Re-code
-- Pocket Lint
-- Daily Dot
-- Lifehacker
-- ReadWrite
-- CNET
-- io9
-- Mac Rumors
-- Codepen
-- Beta List
-
+Building a news hub seems more stupider than ever. I agree about the originality and stuff, but this doesnt drive me anymore

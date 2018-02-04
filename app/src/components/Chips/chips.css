@@ -1,0 +1,52 @@
+.chips {
+  align-items: center;
+  border-radius: 5rem;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  -ms-flex-align: center;
+  font-size: 90%;
+  height: 1.2rem;
+  line-height: .8rem;
+  margin: .25rem ;
+  max-width: 100%;
+  padding: 0.8rem;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.chips .link, .chips .link:hover, .chips .link:active, .chips .link:focus{
+  color: #ffffff;
+}
+
+.chips a, .chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.chips .avatar {
+  margin-left: -.5rem;
+  margin-right: .2rem;
+  padding: 4px;
+}
+
+/*------- COLOR SPECIFIC CLASSES ----------- */
+
+.light-pink-chip {
+  background: rgb(255, 116, 169); /*fallback*/
+  background: -webkit-linear-gradient(120deg, rgb(255, 178, 171) 0%, #ed568d 100%);
+  background: linear-gradient(120deg, rgb(255, 178, 171) 0%, #ed568d 100%)
+  }
+  
+  .light-red-chip {
+    background-color: #da552f;
+    background: -webkit-linear-gradient(to right, #f0c1a5, #da552f);
+    background: linear-gradient(to right, #f0c1a5, #da552f);
+  }
+  
+  
+  .red-chip {
+    background-color: #FF3860;
+  }

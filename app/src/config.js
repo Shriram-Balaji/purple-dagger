@@ -7,11 +7,8 @@ const defaultStyle = {
 }
 
 module.exports = {
-  services: {
-    available:['dribbble','gitHub','product Hunt','code Pen']
-  },
 
-  dribbble : {
+  menuItemOne : {
     palette:{
       'primary':'pink',
       'detail-one': 'light-pink',
@@ -39,7 +36,7 @@ module.exports = {
     }
     // primary, secondary, accent,
   },
-  productHunt : {
+  menuItemTwo : {
     palette:{
       'primary':'pink',
       'detail-one': 'light-red',

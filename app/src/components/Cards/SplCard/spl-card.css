@@ -21,32 +21,32 @@
    min-height: 80px;
  }
 
- .ph-tile-footer {
+ .spl-tile-footer {
    padding: 1rem;
    border-top: 1px solid #eee !important;
  }
 
- .makers {
+ .avatarList {
    text-align: start;
    min-height: 90px;
  }
  
- .makers ul{
+ .avatarList ul{
    display: flex;
    padding: 2px 8px;
  }
 
- .makers li {
+ .avatarList li {
    margin: 5px !important;
  }
 
- .makers #makerTitle {
+ .avatarList h3 {
   padding: 10px 0px 0px 15px;
   font-size: 0.85rem;
   color: #1fd09a;
 }
 
-.no-maker::after{
+.no-avatar::after{
   content: "NA";
   width: 40px;
   height: 40px;
@@ -59,7 +59,7 @@
   margin: 0px;
 }
 
-.chips .ph-avatar{
+.chips .spl-avatar{
   padding: 4px !important;
 }
 

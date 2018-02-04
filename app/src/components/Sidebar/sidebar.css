@@ -30,34 +30,34 @@
   height: 30px;
 }
 
-.sidebar .service-name {
+.sidebar .menu-item {
   padding: 5px 20px;
 }
 
-#dribbbleIcon:hover, #dribbbleIcon:focus, #dribbbleIcon:active{
+#menuItemOneIcon:hover, #menuItemOneIcon:focus, #menuItemOneIcon:active{
    background-color:rgba(234, 76, 137, 0.10);
    cursor: pointer;
 }
 
-#dribbbleIcon:focus, #dribbbleIcon:active {
+#menuItemOneIcon:focus, #menuItemOneIcon:active {
   border-right:3px solid rgba(234, 76, 137, 0.75);
 }
 
-#gitHubIcon:hover, #gitHubIcon:focus, #gitHubIcon:active  {
+#menuItemThreeIcon:hover, #menuItemThreeIcon:focus, #menuItemThreeIcon:active  {
   background-color: rgba(36,41,46, 0.10);
   cursor: pointer;
 }
 
-#gitHubIcon:active, #gitHubIcon:focus {
+#menuItemThreeIcon:active, #menuItemThreeIcon:focus {
   border-right: 3px solid rgba(36,41,46, 0.75);
 }
 
-#productHuntIcon:hover, #productHuntIcon:focus, #productHuntIcon:active  {
+#menuItemTwoIcon:hover, #menuItemTwoIcon:focus, #menuItemTwoIcon:active  {
   background-color: rgba(218, 85, 47, 0.15);
   cursor: pointer;
 }
 
-#productHuntIcon:active, #productHuntIcon:focus {
+#menuItemTwoIcon:active, #menuItemTwoIcon:focus {
   border-right: 3px solid rgba(218, 85, 47, 0.75);
 }
 

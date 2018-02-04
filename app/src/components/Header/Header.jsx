@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './header.css'
-import icons from '~/icons.services'
 
 class Header extends Component {
   constructor(props){

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Icons from '~/icons.inline'
 import './generic-card.css'
+import Icons from '~/inline.icons'
 
 class GenericCard extends Component {
   constructor(props) {
@@ -36,16 +36,6 @@ class GenericCard extends Component {
           </div>
           <div className="card-content">
             <div className="content">
-              <span className={`chips ${this.props.colors['detail-one']}-chip`}>
-                <a href={this.props.detailOneLink} className="link">
-                  {this.renderIcon(this.props.meta['detail-one'])}
-                 {this.props.detailOne}</a>
-              </span>
-              <span className={`chips ${this.props.colors['detail-two']}-chip`}>
-                <span className="link">
-                  {this.renderIcon(this.props.meta['detail-two'])}
-                 {this.props.detailTwo}</span>
-              </span>
             </div>
           </div>
         </div>

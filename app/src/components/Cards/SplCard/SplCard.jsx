@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Icons from '~/icons.inline'
+import Icons from '~/inline.icons'
 import '~/components/Cards/GenericCard/generic-card.css'
-import './ph-card.css'
+import './spl-card.css'
 
-class PhCard extends Component {
+class SplCard extends Component {
   constructor(props){
     super(props)
   }
@@ -20,35 +20,32 @@ class PhCard extends Component {
     const Icon = Icons[iconName]
     const iconClass = classNames({
       'avatar': style.avatar,
-      'ph-avatar': style.avatar
+      'spl-avatar': style.avatar
     });
     return( <Icon fill={style.fill} stroke={style.stroke} className={iconClass}/> )
   }
 
-  openProfile(event, url){
+  openUrl(event, url){
     event.preventDefault();
     window.open(url)
   }
 
-  listMakers(props){
-    let makers = []
-    if(props.makers.length <= 0){
-      makers[0] = (
-        <li><span className="rounded no-maker"/></li>
+  listCircularImages(props){
+    let imageItems = []
+    if(props.imageList.length <= 0){
+      imageItems[0] = (
+        <li><span className="rounded no-avatar"/></li>
       )
     }
     else {
-      for(let index in props.makers){
-        let maker = props.makers[index]
-        let imageUrl = maker['image_url']
-        ['44px']
-        let profileUrl = maker['profile_url']
+      for(let index in props.imageList){
+        let avatarImage = props.imageList[index]['url']
         makers[index] = (
-          <li onClick={(e) => this.openProfile( e, profileUrl)}><img src={imageUrl} className="rounded maker-avatar" alt={maker.username} /></li>
+          <li onClick={(e) => this.openUrl( e, profileUrl)}><img src={imageUrl} className="rounded" alt={maker.username} /></li>
         )
       }
     }
-    return (<ul className>{makers}</ul>)
+    return (<ul className>{imageItems}</ul>)
   }
 
   render(){
@@ -68,19 +65,12 @@ class PhCard extends Component {
                 </div>
               </div>
             </div>
-            <div className="makers">
-              <p id="makerTitle"> MAKERS </p>
-              {this.listMakers(this.props)}
+            <div className="avatarList">
+              <h3> LIST TITLE </h3>
+              {this.listCircularImages(this.props)}
             </div>
-            <div className="card-footer ph-tile-footer columns no-margin padding-5">
+            <div className="card-footer spl-tile-footer columns no-margin padding-5">
               <div id="metaContainer" className="column padding-5">
-                <span className={`chips ${this.props.colors['detail-one']}-chip `}>
-                    {this.renderIcon(this.props.meta['detail-one'])}
-                  {this.props.detailOne}</span>
-                
-                <span className={`chips ${this.props.colors['detail-two']}-chip `}>
-                    {this.renderIcon(this.props.meta['detail-two'])}
-                  {this.props.detailTwo}</span>
               </div>
               <div className="column align-end padding-5">
                <a className="button is-red is-outlined is-small btn-rounded" id="redirectBtn"> GET IT</a>
@@ -92,4 +82,4 @@ class PhCard extends Component {
     }
   }
 
-export default PhCard
+export default SplCard

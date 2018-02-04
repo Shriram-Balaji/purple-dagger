@@ -1,28 +1,25 @@
 import React, { Component } from 'react'
 import './sidebar.css'
-import icons from '~/icons.services'
+import icons from '~/inline.icons'
 
 class Sidebar extends Component {
   constructor(props){
     super(props)
   }
 
-  getImageSource(service){
-    return icons[service]
+  getImageSource(icon){
+    return icons[icon]
   }
 
-  listServiceIcons(props) {
-    let services = props.services
-    const listItems = (services).map((service, index) => {
-      let id = `${service}Icon`
-      let link = "#"+`${service}`
-      let first = service.slice(0,1)
-      let name = first.toUpperCase() + service.slice(1)
+  listSidebarIcons(props) {
+    let options = props.menuItems
+    const listItems = (options).map((option, index) => {
+      let id = `${option}Icon`
+      let link = "#"+`${option}`
       return (
-      <li key={service}>
+      <li key={iconType}>
        <a href={link} id={id} className="sidebar-icons"  onClick={this.props.onSelectTab.bind(this, index)}>
-       <img src={this.getImageSource(service)} className="sidebar-icon" alt={service} />
-              <p className="is-hidden-tablet service-name">{name}</p>
+       <img src={this.getImageSource(option)} className="sidebar-icon" alt={option} />
         </a>
       </li>
       );
@@ -36,7 +33,7 @@ class Sidebar extends Component {
     return(
           <div className="sidebar">
             <div id="sidebar-content">
-              {this.listServiceIcons(this.props) }
+              {this.listSidebarIcons(this.props) }
             </div>
           </div>
     );
